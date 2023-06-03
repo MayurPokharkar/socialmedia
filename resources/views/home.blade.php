@@ -39,7 +39,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('messages.news_feed') }}</div>
+                <div class="card-header">{{ __('News Feed') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -62,7 +62,7 @@
                                                 <button class="btn btn-success float-right" type="submit"> {{ $post->likes->count() }} <i class="bi bi-star-fill"></i></button>
                                             </form>
                                         </span>
-                                        <h2 class="h5 mb-0"> <strong>{{ __('messages.post_created_by') }}: </strong>{{ $post->user->name }}</h2>
+                                        <h2 class="h5 mb-0"> <strong>{{ __('Post Created By') }}: </strong>{{ $post->user->name }}</h2>
                                         <h3 class="h5 mb-0 small text-secondaty"><strong>Post Created At: </strong>{{ $post->created_at->format('Y-m-d') }} <strong>at: </strong> {{ $post->created_at->format('H:i:s') }}</h3>
                                         <h3 class="h5 mb-0 small text-secondary"> <strong>Post Title: </strong>{{ $post->title }}</h3><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i> </span>
                                         <p class="text-small mt-2 font-weight-light">{{ $post->body }}</p>
@@ -73,7 +73,7 @@
                                                 <input type="text" name="body" class="form-control" placeholder="Enter your comment here..." aria-describedby="basic-addon2">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                                    <input type="submit" class="btn btn-primary float-left ml-1 mr-1" value="{{ __('messages.comment') }}">
+                                                    <input type="submit" class="btn btn-primary float-left ml-1 mr-1" value="{{ __('comment') }}">
                                                     <a href="/post/{{ $post->id }}/comments" class="btn btn-dark mr-1">
                                                         {{ $post->comments->count() }}
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="card">
-                            <div class="card-header">{{ __('messages.notifications') }}</div>
+                            <div class="card-header">{{ __('notifications') }}</div>
 
                             <div class="card-body">
                                 @if (session('status'))
@@ -140,7 +140,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">{{ __('messages.users') }}</div>
+                <div class="card-header">{{ __('users') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -154,7 +154,7 @@
                         <div class="card-body w-100">
                           <h5 class="card-title display-6 font-italic"><a href="profile/{{ $user->id }}">{{ $user->name }}</a></h5>
                           <p class="card-text">{{ $user->brief }}.</p>
-                          <a href="profile/{{ $user->id }}" class="btn btn-primary">{{ __('messages.profile') }}</a>
+                          <a href="profile/{{ $user->id }}" class="btn btn-primary">{{ __('profile') }}</a>
                         </div>
 
                         <hr class="mt-3 mb-3"/>

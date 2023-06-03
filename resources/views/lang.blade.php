@@ -24,7 +24,7 @@
             </div>
         </div>
     
-        <h1>{{ __('messages.title') }}</h1>
+        <h1>{{ __('title') }}</h1>
      
     </div>
 </body>

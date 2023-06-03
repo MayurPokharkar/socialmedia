@@ -8,7 +8,7 @@
         <ul class="navbar-nav mr-auto">
             @if (Auth::check())
                 <button type="button" class="btn btn-primary position-relative">
-                    <a class="text-light text-decoration-none" href="/profile/{{ Auth::user()->id }}">{{ __('messages.profile') }}</a>
+                    <a class="text-light text-decoration-none" href="/profile/{{ Auth::user()->id }}">{{ __('profile') }}</a>
                   </button>
 
                 <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -17,14 +17,14 @@
 
                 <li class="nav-item dropdown text-right">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ __('messages.settings') }}
+                        {{ __('settings') }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                            {{ __('messages.logout') }}
+                            {{ __('logout') }}
                         </a>    
                         <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
