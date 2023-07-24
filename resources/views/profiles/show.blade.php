@@ -67,7 +67,7 @@
                 <div class="col-6 col-lg-3">
                     <div class="count-data text-center">
                         {{-- {{ dd($user->posts->count()) }} --}}
-                        <h6 class="count h2" data-to="500" data-speed="500">{{ $user->posts->count() }}</h6>
+                        <h6 class="count h2" data-to="500" data-speed="500">{{ $myPosts->count() }}</h6>
                         <p class="m-0px font-w-600">Posts</p>
                     </div>
                 </div>
@@ -85,8 +85,8 @@
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="count-data text-center">
-                        <h6 class="count h2" data-to="190" data-speed="190">190</h6>
-                        <p class="m-0px font-w-600">Telephonic Talk</p>
+                        <h6 class="count h2" data-to="190" data-speed="190">+44</h6>
+                        <p class="m-0px font-w-600">Country Code</p>
                     </div>
                 </div>
             </div>

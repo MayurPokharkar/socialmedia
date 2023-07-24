@@ -20,7 +20,8 @@ class profileController extends Controller
         $posts = Post::get();
         $comment = Comment::get();
         $myComment = Comment::where('user_id', $user->id)->get();
-        return view('profiles.show', compact('profile', 'user', 'posts', 'comment', 'myComment'));
+        $myPosts = Post::where('user_id', $user->id)->get();
+        return view('profiles.show', compact('profile', 'user', 'posts', 'comment', 'myComment', 'myPosts'));
     }
 
     public function logout() {

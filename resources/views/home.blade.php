@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="card">
-                            <div class="card-header">{{ __('notifications') }}</div>
+                            <div class="card-header">{{ __('Notifications') }}</div>
 
                             <div class="card-body">
                                 @if (session('status'))
@@ -124,7 +124,7 @@
                                                 <li class="timeline-item bg-white rounded ml-3 p-4 shadow ">
                                                     <div class="timeline-arrow"></div>
                                                     <h2 class="h5 mb-0"> <strong>{{ __('Notification From') }}: </strong>{{ $notification->user->name }}</h2>
-                                                    <h3 class="h5 mb-0 small text-secondaty"><strong>Notification Created At: </strong>{{ $notification->created_at->format('Y-m-d') }} <strong>at: </strong> {{ $post->created_at->format('H:i:s') }}</h3>
+                                                    <h3 class="h5 mb-0 small text-secondaty"><strong>Notification Created At: </strong>{{ $notification->created_at->format('Y-m-d') }} <strong>at: </strong> {{ $notification->created_at->format('H:i:s') }}</h3>
                                                     <h3 class="h5 mb-0 small text-secondary"> <strong>Notification Type: </strong>{{ $notification->type }}</h3><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i> </span>
                                                     <p class="text-small mt-2 font-weight-light">{{ $notification->body }}</p>
 
